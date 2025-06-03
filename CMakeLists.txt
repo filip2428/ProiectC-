@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.29)
+project(ProiectC_)
+
+set(CMAKE_CXX_STANDARD 14)
+
+include_directories(.)
+
+add_executable(ProiectC_
+    Elev.cpp
+    Elev.h
+    main.cpp
+        Catalog.h
+        Absente.cpp
+        Absente.h
+        Materie.cpp
+        Materie.h
+        Catalog.cpp)
