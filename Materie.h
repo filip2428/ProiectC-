@@ -5,7 +5,7 @@
 #ifndef MATERIE_H
 #define MATERIE_H
 #include "Absente.h"
-#include "Elev.h"
+#include <vector>
 
 class Materie {
     public:

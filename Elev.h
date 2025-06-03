@@ -23,6 +23,7 @@ public:
     void motiveazaAbsenta(string,string);
     void adaugaNota(int nota, string materie);
     void stergeNota(int nota, string materie);
+    string getCNP() const{ return cnp; };
     friend ostream& operator <<(ostream& os, const Elev&);
 };
 
