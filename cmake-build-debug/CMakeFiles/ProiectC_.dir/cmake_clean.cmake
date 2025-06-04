@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ProiectC_.dir/Absente.cpp.obj"
   "CMakeFiles/ProiectC_.dir/Absente.cpp.obj.d"
-  "CMakeFiles/ProiectC_.dir/Catalog.cpp.obj"
-  "CMakeFiles/ProiectC_.dir/Catalog.cpp.obj.d"
   "CMakeFiles/ProiectC_.dir/Elev.cpp.obj"
   "CMakeFiles/ProiectC_.dir/Elev.cpp.obj.d"
+  "CMakeFiles/ProiectC_.dir/IO.cpp.obj"
+  "CMakeFiles/ProiectC_.dir/IO.cpp.obj.d"
   "CMakeFiles/ProiectC_.dir/Materie.cpp.obj"
   "CMakeFiles/ProiectC_.dir/Materie.cpp.obj.d"
   "CMakeFiles/ProiectC_.dir/main.cpp.obj"

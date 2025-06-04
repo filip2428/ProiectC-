@@ -1,3 +1,3 @@
 CMakeFiles/ProiectC_.dir/Catalog.cpp.obj: \
- D:\Programare\ 2\ProiectC++\Catalog.cpp \
- D:\Programare\ 2\ProiectC++\Catalog.h
+ C:\Users\hacfi\CLionProjects\ProiectC-\Catalog.cpp \
+ C:\Users\hacfi\CLionProjects\ProiectC-\Catalog.h

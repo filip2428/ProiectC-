@@ -43,19 +43,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "D:\clion\CLion 2024.3.4\bin\cmake\win\x64\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2024.3.4\bin\cmake\win\x64\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "D:\clion\CLion 2024.3.4\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2024.3.4\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "D:\Programare 2\ProiectC++"
+CMAKE_SOURCE_DIR = C:\Users\hacfi\CLionProjects\ProiectC-
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "D:\Programare 2\ProiectC++\cmake-build-debug"
+CMAKE_BINARY_DIR = C:\Users\hacfi\CLionProjects\ProiectC-\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ProiectC_.dir/depend.make
@@ -70,78 +70,78 @@ include CMakeFiles/ProiectC_.dir/flags.make
 
 CMakeFiles/ProiectC_.dir/Elev.cpp.obj: CMakeFiles/ProiectC_.dir/flags.make
 CMakeFiles/ProiectC_.dir/Elev.cpp.obj: CMakeFiles/ProiectC_.dir/includes_CXX.rsp
-CMakeFiles/ProiectC_.dir/Elev.cpp.obj: D:/Programare\ 2/ProiectC++/Elev.cpp
+CMakeFiles/ProiectC_.dir/Elev.cpp.obj: C:/Users/hacfi/CLionProjects/ProiectC-/Elev.cpp
 CMakeFiles/ProiectC_.dir/Elev.cpp.obj: CMakeFiles/ProiectC_.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\Programare 2\ProiectC++\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ProiectC_.dir/Elev.cpp.obj"
-	D:\clion\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProiectC_.dir/Elev.cpp.obj -MF CMakeFiles\ProiectC_.dir\Elev.cpp.obj.d -o CMakeFiles\ProiectC_.dir\Elev.cpp.obj -c "D:\Programare 2\ProiectC++\Elev.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\hacfi\CLionProjects\ProiectC-\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ProiectC_.dir/Elev.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProiectC_.dir/Elev.cpp.obj -MF CMakeFiles\ProiectC_.dir\Elev.cpp.obj.d -o CMakeFiles\ProiectC_.dir\Elev.cpp.obj -c C:\Users\hacfi\CLionProjects\ProiectC-\Elev.cpp
 
 CMakeFiles/ProiectC_.dir/Elev.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ProiectC_.dir/Elev.cpp.i"
-	D:\clion\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Programare 2\ProiectC++\Elev.cpp" > CMakeFiles\ProiectC_.dir\Elev.cpp.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\hacfi\CLionProjects\ProiectC-\Elev.cpp > CMakeFiles\ProiectC_.dir\Elev.cpp.i
 
 CMakeFiles/ProiectC_.dir/Elev.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ProiectC_.dir/Elev.cpp.s"
-	D:\clion\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Programare 2\ProiectC++\Elev.cpp" -o CMakeFiles\ProiectC_.dir\Elev.cpp.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\hacfi\CLionProjects\ProiectC-\Elev.cpp -o CMakeFiles\ProiectC_.dir\Elev.cpp.s
 
 CMakeFiles/ProiectC_.dir/main.cpp.obj: CMakeFiles/ProiectC_.dir/flags.make
 CMakeFiles/ProiectC_.dir/main.cpp.obj: CMakeFiles/ProiectC_.dir/includes_CXX.rsp
-CMakeFiles/ProiectC_.dir/main.cpp.obj: D:/Programare\ 2/ProiectC++/main.cpp
+CMakeFiles/ProiectC_.dir/main.cpp.obj: C:/Users/hacfi/CLionProjects/ProiectC-/main.cpp
 CMakeFiles/ProiectC_.dir/main.cpp.obj: CMakeFiles/ProiectC_.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\Programare 2\ProiectC++\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ProiectC_.dir/main.cpp.obj"
-	D:\clion\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProiectC_.dir/main.cpp.obj -MF CMakeFiles\ProiectC_.dir\main.cpp.obj.d -o CMakeFiles\ProiectC_.dir\main.cpp.obj -c "D:\Programare 2\ProiectC++\main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\hacfi\CLionProjects\ProiectC-\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ProiectC_.dir/main.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProiectC_.dir/main.cpp.obj -MF CMakeFiles\ProiectC_.dir\main.cpp.obj.d -o CMakeFiles\ProiectC_.dir\main.cpp.obj -c C:\Users\hacfi\CLionProjects\ProiectC-\main.cpp
 
 CMakeFiles/ProiectC_.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ProiectC_.dir/main.cpp.i"
-	D:\clion\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Programare 2\ProiectC++\main.cpp" > CMakeFiles\ProiectC_.dir\main.cpp.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\hacfi\CLionProjects\ProiectC-\main.cpp > CMakeFiles\ProiectC_.dir\main.cpp.i
 
 CMakeFiles/ProiectC_.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ProiectC_.dir/main.cpp.s"
-	D:\clion\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Programare 2\ProiectC++\main.cpp" -o CMakeFiles\ProiectC_.dir\main.cpp.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\hacfi\CLionProjects\ProiectC-\main.cpp -o CMakeFiles\ProiectC_.dir\main.cpp.s
 
 CMakeFiles/ProiectC_.dir/Absente.cpp.obj: CMakeFiles/ProiectC_.dir/flags.make
 CMakeFiles/ProiectC_.dir/Absente.cpp.obj: CMakeFiles/ProiectC_.dir/includes_CXX.rsp
-CMakeFiles/ProiectC_.dir/Absente.cpp.obj: D:/Programare\ 2/ProiectC++/Absente.cpp
+CMakeFiles/ProiectC_.dir/Absente.cpp.obj: C:/Users/hacfi/CLionProjects/ProiectC-/Absente.cpp
 CMakeFiles/ProiectC_.dir/Absente.cpp.obj: CMakeFiles/ProiectC_.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\Programare 2\ProiectC++\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ProiectC_.dir/Absente.cpp.obj"
-	D:\clion\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProiectC_.dir/Absente.cpp.obj -MF CMakeFiles\ProiectC_.dir\Absente.cpp.obj.d -o CMakeFiles\ProiectC_.dir\Absente.cpp.obj -c "D:\Programare 2\ProiectC++\Absente.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\hacfi\CLionProjects\ProiectC-\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ProiectC_.dir/Absente.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProiectC_.dir/Absente.cpp.obj -MF CMakeFiles\ProiectC_.dir\Absente.cpp.obj.d -o CMakeFiles\ProiectC_.dir\Absente.cpp.obj -c C:\Users\hacfi\CLionProjects\ProiectC-\Absente.cpp
 
 CMakeFiles/ProiectC_.dir/Absente.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ProiectC_.dir/Absente.cpp.i"
-	D:\clion\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Programare 2\ProiectC++\Absente.cpp" > CMakeFiles\ProiectC_.dir\Absente.cpp.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\hacfi\CLionProjects\ProiectC-\Absente.cpp > CMakeFiles\ProiectC_.dir\Absente.cpp.i
 
 CMakeFiles/ProiectC_.dir/Absente.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ProiectC_.dir/Absente.cpp.s"
-	D:\clion\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Programare 2\ProiectC++\Absente.cpp" -o CMakeFiles\ProiectC_.dir\Absente.cpp.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\hacfi\CLionProjects\ProiectC-\Absente.cpp -o CMakeFiles\ProiectC_.dir\Absente.cpp.s
 
 CMakeFiles/ProiectC_.dir/Materie.cpp.obj: CMakeFiles/ProiectC_.dir/flags.make
 CMakeFiles/ProiectC_.dir/Materie.cpp.obj: CMakeFiles/ProiectC_.dir/includes_CXX.rsp
-CMakeFiles/ProiectC_.dir/Materie.cpp.obj: D:/Programare\ 2/ProiectC++/Materie.cpp
+CMakeFiles/ProiectC_.dir/Materie.cpp.obj: C:/Users/hacfi/CLionProjects/ProiectC-/Materie.cpp
 CMakeFiles/ProiectC_.dir/Materie.cpp.obj: CMakeFiles/ProiectC_.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\Programare 2\ProiectC++\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ProiectC_.dir/Materie.cpp.obj"
-	D:\clion\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProiectC_.dir/Materie.cpp.obj -MF CMakeFiles\ProiectC_.dir\Materie.cpp.obj.d -o CMakeFiles\ProiectC_.dir\Materie.cpp.obj -c "D:\Programare 2\ProiectC++\Materie.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\hacfi\CLionProjects\ProiectC-\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ProiectC_.dir/Materie.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProiectC_.dir/Materie.cpp.obj -MF CMakeFiles\ProiectC_.dir\Materie.cpp.obj.d -o CMakeFiles\ProiectC_.dir\Materie.cpp.obj -c C:\Users\hacfi\CLionProjects\ProiectC-\Materie.cpp
 
 CMakeFiles/ProiectC_.dir/Materie.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ProiectC_.dir/Materie.cpp.i"
-	D:\clion\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Programare 2\ProiectC++\Materie.cpp" > CMakeFiles\ProiectC_.dir\Materie.cpp.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\hacfi\CLionProjects\ProiectC-\Materie.cpp > CMakeFiles\ProiectC_.dir\Materie.cpp.i
 
 CMakeFiles/ProiectC_.dir/Materie.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ProiectC_.dir/Materie.cpp.s"
-	D:\clion\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Programare 2\ProiectC++\Materie.cpp" -o CMakeFiles\ProiectC_.dir\Materie.cpp.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\hacfi\CLionProjects\ProiectC-\Materie.cpp -o CMakeFiles\ProiectC_.dir\Materie.cpp.s
 
-CMakeFiles/ProiectC_.dir/Catalog.cpp.obj: CMakeFiles/ProiectC_.dir/flags.make
-CMakeFiles/ProiectC_.dir/Catalog.cpp.obj: CMakeFiles/ProiectC_.dir/includes_CXX.rsp
-CMakeFiles/ProiectC_.dir/Catalog.cpp.obj: D:/Programare\ 2/ProiectC++/Catalog.cpp
-CMakeFiles/ProiectC_.dir/Catalog.cpp.obj: CMakeFiles/ProiectC_.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\Programare 2\ProiectC++\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ProiectC_.dir/Catalog.cpp.obj"
-	D:\clion\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProiectC_.dir/Catalog.cpp.obj -MF CMakeFiles\ProiectC_.dir\Catalog.cpp.obj.d -o CMakeFiles\ProiectC_.dir\Catalog.cpp.obj -c "D:\Programare 2\ProiectC++\Catalog.cpp"
+CMakeFiles/ProiectC_.dir/IO.cpp.obj: CMakeFiles/ProiectC_.dir/flags.make
+CMakeFiles/ProiectC_.dir/IO.cpp.obj: CMakeFiles/ProiectC_.dir/includes_CXX.rsp
+CMakeFiles/ProiectC_.dir/IO.cpp.obj: C:/Users/hacfi/CLionProjects/ProiectC-/IO.cpp
+CMakeFiles/ProiectC_.dir/IO.cpp.obj: CMakeFiles/ProiectC_.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\hacfi\CLionProjects\ProiectC-\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ProiectC_.dir/IO.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProiectC_.dir/IO.cpp.obj -MF CMakeFiles\ProiectC_.dir\IO.cpp.obj.d -o CMakeFiles\ProiectC_.dir\IO.cpp.obj -c C:\Users\hacfi\CLionProjects\ProiectC-\IO.cpp
 
-CMakeFiles/ProiectC_.dir/Catalog.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ProiectC_.dir/Catalog.cpp.i"
-	D:\clion\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Programare 2\ProiectC++\Catalog.cpp" > CMakeFiles\ProiectC_.dir\Catalog.cpp.i
+CMakeFiles/ProiectC_.dir/IO.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ProiectC_.dir/IO.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\hacfi\CLionProjects\ProiectC-\IO.cpp > CMakeFiles\ProiectC_.dir\IO.cpp.i
 
-CMakeFiles/ProiectC_.dir/Catalog.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ProiectC_.dir/Catalog.cpp.s"
-	D:\clion\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Programare 2\ProiectC++\Catalog.cpp" -o CMakeFiles\ProiectC_.dir\Catalog.cpp.s
+CMakeFiles/ProiectC_.dir/IO.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ProiectC_.dir/IO.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\hacfi\CLionProjects\ProiectC-\IO.cpp -o CMakeFiles\ProiectC_.dir\IO.cpp.s
 
 # Object files for target ProiectC_
 ProiectC__OBJECTS = \
@@ -149,7 +149,7 @@ ProiectC__OBJECTS = \
 "CMakeFiles/ProiectC_.dir/main.cpp.obj" \
 "CMakeFiles/ProiectC_.dir/Absente.cpp.obj" \
 "CMakeFiles/ProiectC_.dir/Materie.cpp.obj" \
-"CMakeFiles/ProiectC_.dir/Catalog.cpp.obj"
+"CMakeFiles/ProiectC_.dir/IO.cpp.obj"
 
 # External object files for target ProiectC_
 ProiectC__EXTERNAL_OBJECTS =
@@ -158,12 +158,12 @@ ProiectC_.exe: CMakeFiles/ProiectC_.dir/Elev.cpp.obj
 ProiectC_.exe: CMakeFiles/ProiectC_.dir/main.cpp.obj
 ProiectC_.exe: CMakeFiles/ProiectC_.dir/Absente.cpp.obj
 ProiectC_.exe: CMakeFiles/ProiectC_.dir/Materie.cpp.obj
-ProiectC_.exe: CMakeFiles/ProiectC_.dir/Catalog.cpp.obj
+ProiectC_.exe: CMakeFiles/ProiectC_.dir/IO.cpp.obj
 ProiectC_.exe: CMakeFiles/ProiectC_.dir/build.make
 ProiectC_.exe: CMakeFiles/ProiectC_.dir/linkLibs.rsp
 ProiectC_.exe: CMakeFiles/ProiectC_.dir/objects1.rsp
 ProiectC_.exe: CMakeFiles/ProiectC_.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="D:\Programare 2\ProiectC++\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable ProiectC_.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\hacfi\CLionProjects\ProiectC-\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable ProiectC_.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\ProiectC_.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -175,6 +175,6 @@ CMakeFiles/ProiectC_.dir/clean:
 .PHONY : CMakeFiles/ProiectC_.dir/clean
 
 CMakeFiles/ProiectC_.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "D:\Programare 2\ProiectC++" "D:\Programare 2\ProiectC++" "D:\Programare 2\ProiectC++\cmake-build-debug" "D:\Programare 2\ProiectC++\cmake-build-debug" "D:\Programare 2\ProiectC++\cmake-build-debug\CMakeFiles\ProiectC_.dir\DependInfo.cmake" "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\hacfi\CLionProjects\ProiectC- C:\Users\hacfi\CLionProjects\ProiectC- C:\Users\hacfi\CLionProjects\ProiectC-\cmake-build-debug C:\Users\hacfi\CLionProjects\ProiectC-\cmake-build-debug C:\Users\hacfi\CLionProjects\ProiectC-\cmake-build-debug\CMakeFiles\ProiectC_.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/ProiectC_.dir/depend
 

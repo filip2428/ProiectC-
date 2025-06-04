@@ -24,6 +24,9 @@ public:
     void adaugaNota(int nota, string materie);
     void stergeNota(int nota, string materie);
     string getCNP() const{ return cnp; };
+    const vector<Materie>& getMaterii() const {
+        return materii;
+    }
     friend ostream& operator <<(ostream& os, const Elev&);
 };
 

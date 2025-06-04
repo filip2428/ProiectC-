@@ -47,19 +47,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "D:\clion\CLion 2024.3.4\bin\cmake\win\x64\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2024.3.4\bin\cmake\win\x64\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "D:\clion\CLion 2024.3.4\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2024.3.4\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "D:\Programare 2\ProiectC++"
+CMAKE_SOURCE_DIR = C:\Users\hacfi\CLionProjects\ProiectC-
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "D:\Programare 2\ProiectC++\cmake-build-debug"
+CMAKE_BINARY_DIR = C:\Users\hacfi\CLionProjects\ProiectC-\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -67,7 +67,7 @@ CMAKE_BINARY_DIR = "D:\Programare 2\ProiectC++\cmake-build-debug"
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
-	"D:\clion\CLion 2024.3.4\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"C:\Program Files\JetBrains\CLion 2024.3.4\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -77,7 +77,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	"D:\clion\CLion 2024.3.4\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"C:\Program Files\JetBrains\CLion 2024.3.4\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Programare 2\ProiectC++\cmake-build-debug\CMakeFiles" "D:\Programare 2\ProiectC++\cmake-build-debug\\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\hacfi\CLionProjects\ProiectC-\cmake-build-debug\CMakeFiles C:\Users\hacfi\CLionProjects\ProiectC-\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Programare 2\ProiectC++\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\hacfi\CLionProjects\ProiectC-\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -152,30 +152,6 @@ Absente.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectC_.dir\build.make CMakeFiles/ProiectC_.dir/Absente.cpp.s
 .PHONY : Absente.cpp.s
 
-Catalog.obj: Catalog.cpp.obj
-.PHONY : Catalog.obj
-
-# target to build an object file
-Catalog.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectC_.dir\build.make CMakeFiles/ProiectC_.dir/Catalog.cpp.obj
-.PHONY : Catalog.cpp.obj
-
-Catalog.i: Catalog.cpp.i
-.PHONY : Catalog.i
-
-# target to preprocess a source file
-Catalog.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectC_.dir\build.make CMakeFiles/ProiectC_.dir/Catalog.cpp.i
-.PHONY : Catalog.cpp.i
-
-Catalog.s: Catalog.cpp.s
-.PHONY : Catalog.s
-
-# target to generate assembly for a file
-Catalog.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectC_.dir\build.make CMakeFiles/ProiectC_.dir/Catalog.cpp.s
-.PHONY : Catalog.cpp.s
-
 Elev.obj: Elev.cpp.obj
 .PHONY : Elev.obj
 
@@ -199,6 +175,30 @@ Elev.s: Elev.cpp.s
 Elev.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectC_.dir\build.make CMakeFiles/ProiectC_.dir/Elev.cpp.s
 .PHONY : Elev.cpp.s
+
+IO.obj: IO.cpp.obj
+.PHONY : IO.obj
+
+# target to build an object file
+IO.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectC_.dir\build.make CMakeFiles/ProiectC_.dir/IO.cpp.obj
+.PHONY : IO.cpp.obj
+
+IO.i: IO.cpp.i
+.PHONY : IO.i
+
+# target to preprocess a source file
+IO.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectC_.dir\build.make CMakeFiles/ProiectC_.dir/IO.cpp.i
+.PHONY : IO.cpp.i
+
+IO.s: IO.cpp.s
+.PHONY : IO.s
+
+# target to generate assembly for a file
+IO.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectC_.dir\build.make CMakeFiles/ProiectC_.dir/IO.cpp.s
+.PHONY : IO.cpp.s
 
 Materie.obj: Materie.cpp.obj
 .PHONY : Materie.obj
@@ -260,12 +260,12 @@ help:
 	@echo ... Absente.obj
 	@echo ... Absente.i
 	@echo ... Absente.s
-	@echo ... Catalog.obj
-	@echo ... Catalog.i
-	@echo ... Catalog.s
 	@echo ... Elev.obj
 	@echo ... Elev.i
 	@echo ... Elev.s
+	@echo ... IO.obj
+	@echo ... IO.i
+	@echo ... IO.s
 	@echo ... Materie.obj
 	@echo ... Materie.i
 	@echo ... Materie.s

@@ -9,9 +9,10 @@ add_executable(ProiectC_
     Elev.cpp
     Elev.h
     main.cpp
-        Catalog.h
         Absente.cpp
         Absente.h
         Materie.cpp
         Materie.h
-        Catalog.cpp)
+        IO.cpp
+        IO.h
+)

@@ -3,6 +3,7 @@
 #include <vector>
 #include <string>
 #include "Elev.h"
+#include "IO.h"
 using namespace std;
 
 vector<Elev> catalog;
@@ -16,6 +17,10 @@ Elev* cautaElev(string cnp) {
 }
 
 int main(int argc, char* argv[]) {
+
+    citesteElevi("elevi.txt");
+    citesteMaterii("materii.txt");
+
     if (argc < 2) {
         cout << "Utilizare: ./ProiectC_ [student1|student2] [optiuni...]\n";
         return 1;
@@ -41,12 +46,16 @@ int main(int argc, char* argv[]) {
 
         if (operatie == "adaugaNota") {
             elev->adaugaNota(stoi(valoare), materie);
+            scrieMaterii("materii.txt");
         } else if (operatie == "stergeNota") {
             elev->stergeNota(stoi(valoare), materie);
+            scrieMaterii("materii.txt");
         } else if (operatie == "adaugaAbsenta") {
             elev->adaugaAbsenta(valoare, materie);
+            scrieMaterii("materii.txt");
         } else if (operatie == "stergeAbsenta") {
             elev->stergeAbsenta(valoare, materie);
+            scrieMaterii("materii.txt");
         } else {
             cout << "Operatie necunoscuta pentru student1.\n";
         }
@@ -68,6 +77,7 @@ int main(int argc, char* argv[]) {
             string prenume = argv[4];
             string cnp = argv[5];
             catalog.emplace_back(nume, prenume, cnp);
+            scrieElevi("elevi.txt");
         }
         else if (operatie == "stergeElev") {
             string cnp = argv[3];
@@ -79,6 +89,7 @@ int main(int argc, char* argv[]) {
             } else {
                 cout << "Elevul nu a fost gasit.\n";
             }
+            scrieElevi("elevi.txt");
         }
         else if (operatie == "motiveazaAbsenta") {
             if (argc < 6) {
@@ -91,6 +102,7 @@ int main(int argc, char* argv[]) {
             Elev* elev = cautaElev(cnp);
             if (elev) {
                 elev->motiveazaAbsenta(data, materie);
+                scrieMaterii("materii.txt");
             } else {
                 cout << "Elevul nu a fost gasit.\n";
             }
