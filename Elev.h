@@ -27,7 +27,7 @@ public:
     const vector<Materie>& getMaterii() const {
         return materii;
     }
-    friend ostream& operator <<(ostream& os, const Elev&);
+    friend ostream& operator <<(ostream& os, const Elev& e);
 };
 
 #endif //ELEV_H

@@ -78,7 +78,11 @@ void citesteMaterii(const string& numeFisier) {
 //=================== SCRIERE ===================
 void scrieElevi(const string& numeFisier) {
     ofstream out(numeFisier);
+    int i = 0;
     for (auto& e : catalog) {
+        i++;
+        if (i>1)
+            out<<'\n';
         out << e;
     }
     out.close();

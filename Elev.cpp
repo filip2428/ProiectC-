@@ -15,7 +15,7 @@ Elev::Elev(string nume, string prenume, string cnp) {
 }
 
 ostream& operator<<(ostream& os, const Elev& elev) {
-    os<<"Nume: "<<elev.nume<<" Prenume: "<<elev.prenume<<" CNP: "<<elev.cnp;
+    os<<elev.nume<<' '<<elev.prenume<<' '<<elev.cnp;
     return os;
 }
 
