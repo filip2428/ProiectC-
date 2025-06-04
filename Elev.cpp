@@ -78,5 +78,27 @@ void Elev::stergeNota(int nota, string materie) {
     cout << "Nu s-a gasit materia\n";
 }
 
+void Elev::adaugaMaterie(const string& numeMaterie) {
+    for (const auto& m : materii) {
+        if (m.nume == numeMaterie) {
+            cout << "Materia " << numeMaterie << " exista deja.\n";
+            return;
+        }
+    }
+    materii.emplace_back(numeMaterie);
+    cout << "Materia " << numeMaterie << " a fost adaugata elevului " << nume << " " << prenume << ".\n";
+}
+
+void Elev::stergeMaterie(const string& numeMaterie) {
+    auto it = std::remove_if(materii.begin(), materii.end(),
+                             [&](const Materie& m) { return m.nume == numeMaterie; });
+
+    if (it != materii.end()) {
+        materii.erase(it, materii.end());
+        cout << "Materia " << numeMaterie << " a fost stearsa.\n";
+    } else {
+        cout << "Materia " << numeMaterie << " nu a fost gasita.\n";
+    }
+}
 
 

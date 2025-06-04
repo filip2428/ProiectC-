@@ -8,11 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/hacfi/CLionProjects/ProiectC-/Absente.cpp" "CMakeFiles/ProiectC_.dir/Absente.cpp.obj" "gcc" "CMakeFiles/ProiectC_.dir/Absente.cpp.obj.d"
-  "C:/Users/hacfi/CLionProjects/ProiectC-/Elev.cpp" "CMakeFiles/ProiectC_.dir/Elev.cpp.obj" "gcc" "CMakeFiles/ProiectC_.dir/Elev.cpp.obj.d"
-  "C:/Users/hacfi/CLionProjects/ProiectC-/IO.cpp" "CMakeFiles/ProiectC_.dir/IO.cpp.obj" "gcc" "CMakeFiles/ProiectC_.dir/IO.cpp.obj.d"
-  "C:/Users/hacfi/CLionProjects/ProiectC-/Materie.cpp" "CMakeFiles/ProiectC_.dir/Materie.cpp.obj" "gcc" "CMakeFiles/ProiectC_.dir/Materie.cpp.obj.d"
-  "C:/Users/hacfi/CLionProjects/ProiectC-/main.cpp" "CMakeFiles/ProiectC_.dir/main.cpp.obj" "gcc" "CMakeFiles/ProiectC_.dir/main.cpp.obj.d"
+  "C:/Facultate/PP/Proiect_C++/Absente.cpp" "CMakeFiles/ProiectC_.dir/Absente.cpp.obj" "gcc" "CMakeFiles/ProiectC_.dir/Absente.cpp.obj.d"
+  "C:/Facultate/PP/Proiect_C++/Elev.cpp" "CMakeFiles/ProiectC_.dir/Elev.cpp.obj" "gcc" "CMakeFiles/ProiectC_.dir/Elev.cpp.obj.d"
+  "C:/Facultate/PP/Proiect_C++/IO.cpp" "CMakeFiles/ProiectC_.dir/IO.cpp.obj" "gcc" "CMakeFiles/ProiectC_.dir/IO.cpp.obj.d"
+  "C:/Facultate/PP/Proiect_C++/Materie.cpp" "CMakeFiles/ProiectC_.dir/Materie.cpp.obj" "gcc" "CMakeFiles/ProiectC_.dir/Materie.cpp.obj.d"
+  "C:/Facultate/PP/Proiect_C++/main.cpp" "CMakeFiles/ProiectC_.dir/main.cpp.obj" "gcc" "CMakeFiles/ProiectC_.dir/main.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

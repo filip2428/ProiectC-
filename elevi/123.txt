@@ -1,0 +1,8 @@
+Nume: Popescu
+Prenume: Ion
+CNP: 123
+
+Materie: Matematica
+Note: 
+Absente: 05.06.2025*
+

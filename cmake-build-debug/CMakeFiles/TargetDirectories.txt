@@ -1,3 +1,3 @@
-C:/Users/hacfi/CLionProjects/ProiectC-/cmake-build-debug/CMakeFiles/ProiectC_.dir
-C:/Users/hacfi/CLionProjects/ProiectC-/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/hacfi/CLionProjects/ProiectC-/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Facultate/PP/Proiect_C++/cmake-build-debug/CMakeFiles/ProiectC_.dir
+C:/Facultate/PP/Proiect_C++/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Facultate/PP/Proiect_C++/cmake-build-debug/CMakeFiles/rebuild_cache.dir

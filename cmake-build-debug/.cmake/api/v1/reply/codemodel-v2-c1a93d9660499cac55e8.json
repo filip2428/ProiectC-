@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ProiectC_::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ProiectC_-Debug-04cce258155ffdb7ba1a.json",
+					"jsonFile" : "target-ProiectC_-Debug-431985d32bbe3ba9547c.json",
 					"name" : "ProiectC_",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/hacfi/CLionProjects/ProiectC-/cmake-build-debug",
-		"source" : "C:/Users/hacfi/CLionProjects/ProiectC-"
+		"build" : "C:/Facultate/PP/Proiect_C++/cmake-build-debug",
+		"source" : "C:/Facultate/PP/Proiect_C++"
 	},
 	"version" : 
 	{

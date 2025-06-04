@@ -110,6 +110,103 @@ void scrieMaterii(const string& numeFisier) {
     out.close();
 }
 
+#include <filesystem>
+using namespace std;
+namespace fs = std::filesystem;
+
+void citesteTotCatalogul() {
+    catalog.clear();
+    for (const auto& entry : fs::directory_iterator("elevi")) {
+        ifstream in(entry.path());
+        if (!in.is_open()) continue;
+
+        string nume, prenume, cnp;
+        string linie;
+
+        getline(in, linie); // Nume
+        nume = linie.substr(6); // dupa "Nume: "
+
+        getline(in, linie); // Prenume
+        prenume = linie.substr(9); // dupa "Prenume: "
+
+        getline(in, linie); // CNP
+        cnp = linie.substr(5); // dupa "CNP: "
+
+        Elev elev(nume, prenume, cnp);
+
+        while (getline(in, linie)) {
+            if (linie.empty()) continue;
+
+            if (linie.rfind("Materie:", 0) == 0) {
+                string materie = linie.substr(9);
+                elev.adaugaMaterie(materie);
+
+                getline(in, linie); // Note:
+                if (linie.rfind("Note:", 0) == 0) {
+                    string noteStr = linie.substr(6);
+                    istringstream ss(noteStr);
+                    string nota;
+                    while (getline(ss, nota, ',')) {
+                        if (!nota.empty())
+                            elev.adaugaNota(stoi(nota), materie);
+                    }
+                }
+
+                getline(in, linie); // Absente:
+                if (linie.rfind("Absente:", 0) == 0) {
+                    string absStr = linie.substr(9);
+                    istringstream ss(absStr);
+                    string abs;
+                    while (getline(ss, abs, ',')) {
+                        bool motivat = false;
+                        if (!abs.empty() && abs.back() == '*') {
+                            motivat = true;
+                            abs.pop_back();
+                        }
+                        elev.adaugaAbsenta(abs, materie);
+                        if (motivat) elev.motiveazaAbsenta(abs, materie);
+                    }
+                }
+            }
+        }
+        in.close();
+        catalog.push_back(elev);
+    }
+}
+void scrieElevIndividual(const Elev& e) {
+    string filename = "elevi/" + e.getCNP() + ".txt";
+    ofstream out(filename);
+    if (!out.is_open()) {
+        cout << "Eroare la deschiderea fisierului pentru scriere: " << filename << "\n";
+        return;
+    }
+
+    out << "Nume: " << e.getNume() << "\n";
+    out << "Prenume: " << e.getPrenume() << "\n";
+    out << "CNP: " << e.getCNP() << "\n\n";
+
+    for (const auto& m : e.getMaterii()) {
+        out << "Materie: " << m.nume << "\n";
+
+        out << "Note: ";
+        for (size_t i = 0; i < m.note.size(); ++i) {
+            out << m.note[i];
+            if (i + 1 < m.note.size()) out << ",";
+        }
+        out << "\n";
+
+        out << "Absente: ";
+        for (size_t i = 0; i < m.abs.size(); ++i) {
+            out << m.abs[i].data;
+            if (m.abs[i].motivat) out << "*";
+            if (i + 1 < m.abs.size()) out << ",";
+        }
+        out << "\n\n";
+    }
+
+    out.close();
+}
+
 //=================== UTILIZARE ===================
 // Apelează aceste funcții în main.cpp:
 // citesteElevi("elevi.txt");
