@@ -34,3 +34,11 @@ void Materie::delNota(int valoare, const string& data) {
         note.erase(it);
     }
 }
+
+vector<int> Materie::getNoteValori() const {
+    vector<int> valori;
+    for (const auto& n : note) {
+        valori.push_back(n.valoare);
+    }
+    return valori;
+}

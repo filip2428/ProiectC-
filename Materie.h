@@ -14,6 +14,7 @@ class Materie {
     vector<Absente> abs;
     vector<Nota> note;
     Materie(string);
+    vector<int> getNoteValori() const;
     void addAbsenta(string);
     void delAbsenta(string);
     void addNota(int valoare, const string& data="");

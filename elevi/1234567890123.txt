@@ -1,0 +1,14 @@
+Nume: Popescu
+Prenume: Andrei
+CNP: 1234567890123
+
+Materie: Matematica
+Note: 
+Media: 0
+Absente: 05.06.2025,06.06.2025
+
+Materie: Informatica
+Note: 
+Media: 0
+Absente: 07.06.2025,08.06.2025
+

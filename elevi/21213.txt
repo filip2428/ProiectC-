@@ -1,8 +1,0 @@
-Nume: Gica
-Prenume: Popescu
-CNP: 21213
-
-Materie: Biologie
-Note: 
-Absente: 03.06.2025,05.06.2025*
-

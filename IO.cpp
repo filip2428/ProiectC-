@@ -1,18 +1,24 @@
-//
-// Created by hacfi on 04.06.2025.
-//
-
 #include "IO.h"
-// citire_scriere_catalog.cpp
 #include <iostream>
 #include <fstream>
 #include <sstream>
 #include <vector>
 #include <string>
 #include "Elev.h"
+#include "Materie.h"
 using namespace std;
 
 extern vector<Elev> catalog;
+
+template <typename T>
+double calculeazaMedie(const vector<T>& valori) {
+    if (valori.empty()) return 0.0;
+    double suma = 0;
+    for (const auto& v : valori) {
+        suma += v;
+    }
+    return suma / valori.size();
+}
 
 //=================== CITIRE ===================
 void citesteElevi(const string& numeFisier) {
@@ -85,17 +91,7 @@ void citesteMaterii(const string& numeFisier) {
 }
 
 //=================== SCRIERE ===================
-void scrieElevi(const string& numeFisier) {
-    ofstream out(numeFisier);
-    int i = 0;
-    for (auto& e : catalog) {
-        i++;
-        if (i>1)
-            out<<'\n';
-        out << e;
-    }
-    out.close();
-}
+
 
 void scrieMaterii(const string& numeFisier) {
     ofstream out(numeFisier);
@@ -109,7 +105,7 @@ void scrieMaterii(const string& numeFisier) {
                 if (i + 1 < m.note.size()) out << ",";
             }
             out << " absente:";
-            for (size_t i = 0; i < m.abs.size(); i++) {
+            for (size_t  i = 0; i < m.abs.size(); i++) {
                 out << m.abs[i].data;
                 if (m.abs[i].motivat) out << "*";
                 if (i + 1 < m.abs.size()) out << ",";
@@ -126,21 +122,16 @@ namespace fs = std::filesystem;
 
 void citesteTotCatalogul() {
     catalog.clear();
+
     for (const auto& entry : fs::directory_iterator("elevi")) {
         ifstream in(entry.path());
         if (!in.is_open()) continue;
 
-        string nume, prenume, cnp;
-        string linie;
+        string nume, prenume, cnp, linie;
 
-        getline(in, linie); // Nume
-        nume = linie.substr(6); // dupa "Nume: "
-
-        getline(in, linie); // Prenume
-        prenume = linie.substr(9); // dupa "Prenume: "
-
-        getline(in, linie); // CNP
-        cnp = linie.substr(5); // dupa "CNP: "
+        getline(in, linie);  nume    = linie.substr(6);
+        getline(in, linie);  prenume = linie.substr(9);
+        getline(in, linie);  cnp     = linie.substr(5);
 
         Elev elev(nume, prenume, cnp);
 
@@ -151,26 +142,31 @@ void citesteTotCatalogul() {
                 string materie = linie.substr(9);
                 elev.adaugaMaterie(materie, true);
 
-                getline(in, linie); // Note:
+                /* -------- NOTE -------- */
+                getline(in, linie);                // "Note:"
                 if (linie.rfind("Note:", 0) == 0) {
                     string noteStr = linie.substr(6);
                     istringstream ss(noteStr);
                     string nota;
                     while (getline(ss, nota, ',')) {
                         if (!nota.empty()) {
-                            string valPart = nota;
-                            string dataPart;
+                            string val = nota, data;
                             size_t col = nota.find(':');
                             if (col != string::npos) {
-                                valPart = nota.substr(0, col);
-                                dataPart = nota.substr(col + 1);
+                                val  = nota.substr(0, col);
+                                data = nota.substr(col + 1);
                             }
-                            elev.adaugaNota(stoi(valPart), materie, dataPart);
+                            elev.adaugaNota(stoi(val), materie, data);
                         }
                     }
                 }
 
-                getline(in, linie); // Absente:
+                /* -------- MEDIA  (linie nouă de ignorat) -------- */
+                getline(in, linie);                // poate fi "Media:" sau direct "Absente:"
+                if (linie.rfind("Media:", 0) == 0) // dacă e "Media:", mai citeşte o linie
+                    getline(in, linie);            // acum e sigur "Absente:"
+
+                /* -------- ABSENTE -------- */
                 if (linie.rfind("Absente:", 0) == 0) {
                     string absStr = linie.substr(9);
                     istringstream ss(absStr);
@@ -191,6 +187,8 @@ void citesteTotCatalogul() {
         catalog.push_back(elev);
     }
 }
+
+
 void scrieElevIndividual(const Elev& e) {
     string filename = "elevi/" + e.getCNP() + ".txt";
     ofstream out(filename);
@@ -214,6 +212,11 @@ void scrieElevIndividual(const Elev& e) {
         }
         out << "\n";
 
+        // Calculeaza si scrie media
+        vector<int> valori = m.getNoteValori();
+        double medie = calculeazaMedie(valori);
+        out << "Media: " << medie << "\n";
+
         out << "Absente: ";
         for (size_t i = 0; i < m.abs.size(); ++i) {
             out << m.abs[i].data;
@@ -225,10 +228,3 @@ void scrieElevIndividual(const Elev& e) {
 
     out.close();
 }
-
-//=================== UTILIZARE ===================
-// Apelează aceste funcții în main.cpp:
-// citesteElevi("elevi.txt");
-// citesteMaterii("materii.txt");
-// scrieElevi("elevi.txt");
-// scrieMaterii("materii.txt");
