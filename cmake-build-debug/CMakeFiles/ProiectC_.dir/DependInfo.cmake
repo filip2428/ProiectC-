@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "D:/Programare 2/ProiectC++/Elev.cpp" "CMakeFiles/ProiectC_.dir/Elev.cpp.obj" "gcc" "CMakeFiles/ProiectC_.dir/Elev.cpp.obj.d"
   "D:/Programare 2/ProiectC++/IO.cpp" "CMakeFiles/ProiectC_.dir/IO.cpp.obj" "gcc" "CMakeFiles/ProiectC_.dir/IO.cpp.obj.d"
   "D:/Programare 2/ProiectC++/Materie.cpp" "CMakeFiles/ProiectC_.dir/Materie.cpp.obj" "gcc" "CMakeFiles/ProiectC_.dir/Materie.cpp.obj.d"
+  "D:/Programare 2/ProiectC++/Nota.cpp" "CMakeFiles/ProiectC_.dir/Nota.cpp.obj" "gcc" "CMakeFiles/ProiectC_.dir/Nota.cpp.obj.d"
   "D:/Programare 2/ProiectC++/main.cpp" "CMakeFiles/ProiectC_.dir/main.cpp.obj" "gcc" "CMakeFiles/ProiectC_.dir/main.cpp.obj.d"
   )
 

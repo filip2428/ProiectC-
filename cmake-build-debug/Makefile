@@ -224,6 +224,30 @@ Materie.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectC_.dir\build.make CMakeFiles/ProiectC_.dir/Materie.cpp.s
 .PHONY : Materie.cpp.s
 
+Nota.obj: Nota.cpp.obj
+.PHONY : Nota.obj
+
+# target to build an object file
+Nota.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectC_.dir\build.make CMakeFiles/ProiectC_.dir/Nota.cpp.obj
+.PHONY : Nota.cpp.obj
+
+Nota.i: Nota.cpp.i
+.PHONY : Nota.i
+
+# target to preprocess a source file
+Nota.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectC_.dir\build.make CMakeFiles/ProiectC_.dir/Nota.cpp.i
+.PHONY : Nota.cpp.i
+
+Nota.s: Nota.cpp.s
+.PHONY : Nota.s
+
+# target to generate assembly for a file
+Nota.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectC_.dir\build.make CMakeFiles/ProiectC_.dir/Nota.cpp.s
+.PHONY : Nota.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -269,6 +293,9 @@ help:
 	@echo ... Materie.obj
 	@echo ... Materie.i
 	@echo ... Materie.s
+	@echo ... Nota.obj
+	@echo ... Nota.i
+	@echo ... Nota.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

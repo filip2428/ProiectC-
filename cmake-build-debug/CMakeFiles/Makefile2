@@ -80,12 +80,12 @@ clean: CMakeFiles/ProiectC_.dir/clean
 CMakeFiles/ProiectC_.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectC_.dir\build.make CMakeFiles/ProiectC_.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProiectC_.dir\build.make CMakeFiles/ProiectC_.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="D:\Programare 2\ProiectC++\cmake-build-debug\CMakeFiles" --progress-num=1,2,3,4,5,6 "Built target ProiectC_"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="D:\Programare 2\ProiectC++\cmake-build-debug\CMakeFiles" --progress-num=1,2,3,4,5,6,7 "Built target ProiectC_"
 .PHONY : CMakeFiles/ProiectC_.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ProiectC_.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Programare 2\ProiectC++\cmake-build-debug\CMakeFiles" 6
+	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Programare 2\ProiectC++\cmake-build-debug\CMakeFiles" 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/ProiectC_.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Programare 2\ProiectC++\cmake-build-debug\CMakeFiles" 0
 .PHONY : CMakeFiles/ProiectC_.dir/rule

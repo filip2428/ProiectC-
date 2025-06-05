@@ -43,20 +43,22 @@ void Elev::motiveazaAbsenta(const string data, const string materie) {
     cout << "Nu s-a gasit materia sau absenta\n";
 }
 
-void Elev::adaugaNota(const int nota, const string materie) {
+void Elev::adaugaNota(int nota, const string& materie, const string& data) {
     for (auto& i : materii) {
         if (i.nume == materie) {
-            i.note.push_back(nota);
+            i.addNota(nota, data);
             return;
         }
     }
     cout << "Nu s-a gasit materia\n";
 }
 
-void Elev::stergeNota(const int nota, const string materie) {
+void Elev::stergeNota(int nota, const string& materie, const string& data) {
     for (auto& i : materii) {
         if (i.nume == materie) {
-            auto it = find(i.note.begin(), i.note.end(), nota);
+            auto it = std::find_if(i.note.begin(), i.note.end(), [&](const Nota& n){
+                return n.valoare == nota && (data.empty() || n.data == data);
+            });
             if (it != i.note.end()) {
                 i.note.erase(it);
             } else {
@@ -68,7 +70,7 @@ void Elev::stergeNota(const int nota, const string materie) {
     cout << "Nu s-a gasit materia\n";
 }
 
-void Elev::adaugaMaterie(const string& numeMaterie) {
+void Elev::adaugaMaterie(const string& numeMaterie, bool silent) {
     for (const auto& m : materii) {
         if (m.nume == numeMaterie) {
             cout << "Materia " << numeMaterie << " exista deja.\n";
@@ -76,7 +78,8 @@ void Elev::adaugaMaterie(const string& numeMaterie) {
         }
     }
     materii.emplace_back(numeMaterie);
-    cout << "Materia " << numeMaterie << " a fost adaugata elevului " << nume << " " << prenume << ".\n";
+    if (!silent)
+        cout << "Materia " << numeMaterie << " a fost adaugata elevului " << nume << " " << prenume << ".\n";
 }
 
 void Elev::stergeMaterie(const string& numeMaterie) {

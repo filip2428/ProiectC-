@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ProiectC_.dir/IO.cpp.obj.d"
   "CMakeFiles/ProiectC_.dir/Materie.cpp.obj"
   "CMakeFiles/ProiectC_.dir/Materie.cpp.obj.d"
+  "CMakeFiles/ProiectC_.dir/Nota.cpp.obj"
+  "CMakeFiles/ProiectC_.dir/Nota.cpp.obj.d"
   "CMakeFiles/ProiectC_.dir/main.cpp.obj"
   "CMakeFiles/ProiectC_.dir/main.cpp.obj.d"
   "ProiectC_.exe"

@@ -13,6 +13,8 @@ add_executable(ProiectC_
         Absente.h
         Materie.cpp
         Materie.h
+        Nota.cpp
+        Nota.h
         IO.cpp
         IO.h
 )
