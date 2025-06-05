@@ -3,18 +3,13 @@ project(ProiectC_)
 
 set(CMAKE_CXX_STANDARD 17)
 
-include_directories(.)
+include_directories(include)
 
 add_executable(ProiectC_
-    Elev.cpp
-    Elev.h
     main.cpp
-        Absente.cpp
-        Absente.h
-        Materie.cpp
-        Materie.h
-        Nota.cpp
-        Nota.h
-        IO.cpp
-        IO.h
+    src/Elev.cpp
+    src/Absente.cpp
+    src/Materie.cpp
+    src/Nota.cpp
+    src/IO.cpp
 )

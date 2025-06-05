@@ -123,7 +123,7 @@ namespace fs = std::filesystem;
 void citesteTotCatalogul() {
     catalog.clear();
 
-    for (const auto& entry : fs::directory_iterator("elevi")) {
+    for (const auto& entry : fs::directory_iterator("data/elevi")) {
         ifstream in(entry.path());
         if (!in.is_open()) continue;
 
@@ -190,7 +190,7 @@ void citesteTotCatalogul() {
 
 
 void scrieElevIndividual(const Elev& e) {
-    string filename = "elevi/" + e.getCNP() + ".txt";
+    string filename = "data/elevi/" + e.getCNP() + ".txt";
     ofstream out(filename);
     if (!out.is_open()) {
         cout << "Eroare la deschiderea fisierului pentru scriere: " << filename << "\n";
