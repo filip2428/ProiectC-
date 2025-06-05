@@ -19,7 +19,7 @@ ostream& operator<<(ostream& os, const Elev& elev) {
     return os;
 }
 
-void Elev::adaugaAbsenta(string data, string materie) {
+void Elev::adaugaAbsenta(const string data, const string materie) {
     for (auto& i : materii) {
         if (i.nume == materie) {
             i.addAbsenta(data);
@@ -29,17 +29,7 @@ void Elev::adaugaAbsenta(string data, string materie) {
     cout << "Nu s-a gasit materia\n";
 }
 
-void Elev::stergeAbsenta(string data, string materie) {
-    for (auto& i : materii) {
-        if (i.nume == materie) {
-            i.delAbsenta(data);
-            return;
-        }
-    }
-    cout << "Nu s-a gasit materia\n";
-}
-
-void Elev::motiveazaAbsenta(string data, string materie) {
+void Elev::motiveazaAbsenta(const string data, const string materie) {
     for (auto& i : materii) {
         if (i.nume == materie) {
             for (auto& abs : i.abs) {
@@ -53,7 +43,7 @@ void Elev::motiveazaAbsenta(string data, string materie) {
     cout << "Nu s-a gasit materia sau absenta\n";
 }
 
-void Elev::adaugaNota(int nota, string materie) {
+void Elev::adaugaNota(const int nota, const string materie) {
     for (auto& i : materii) {
         if (i.nume == materie) {
             i.note.push_back(nota);
@@ -63,7 +53,7 @@ void Elev::adaugaNota(int nota, string materie) {
     cout << "Nu s-a gasit materia\n";
 }
 
-void Elev::stergeNota(int nota, string materie) {
+void Elev::stergeNota(const int nota, const string materie) {
     for (auto& i : materii) {
         if (i.nume == materie) {
             auto it = find(i.note.begin(), i.note.end(), nota);

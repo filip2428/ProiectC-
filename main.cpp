@@ -28,12 +28,10 @@ int main(int argc, char* argv[]) {
         cout << "  adaugaNota CNP Nota Materie\n";
         cout << "  stergeNota CNP Nota Materie\n";
         cout << "  adaugaAbsenta CNP Data Materie\n";
-        cout << "  stergeAbsenta CNP Data Materie\n";
         cout << "  motiveazaAbsenta CNP Data Materie\n";
         cout << "  afiseazaCatalog\n";
         return 1;
     }
-
     string operatie = argv[1];
 
     if (operatie == "adaugaElev") {
@@ -143,21 +141,6 @@ int main(int argc, char* argv[]) {
             return 1;
         }
         elev->adaugaAbsenta(data, materie);
-        scrieElevIndividual(*elev);
-    }
-
-    else if (operatie == "stergeAbsenta") {
-        if (argc < 5) {
-            cout << "Utilizare: stergeAbsenta CNP Data Materie\n";
-            return 1;
-        }
-        string cnp = argv[2], data = argv[3], materie = argv[4];
-        Elev* elev = cautaElev(cnp);
-        if (!elev) {
-            cout << "Elevul cu CNP " << cnp << " nu a fost gasit.\n";
-            return 1;
-        }
-        elev->stergeAbsenta(data, materie);
         scrieElevIndividual(*elev);
     }
 

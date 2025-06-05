@@ -25,10 +25,9 @@ public:
         return prenume;
     };
     void adaugaAbsenta(string,string);
-    void stergeAbsenta(string,string);
     void motiveazaAbsenta(string,string);
-    void adaugaNota(int nota, string materie);
-    void stergeNota(int nota, string materie);
+    void adaugaNota(const int nota,const string materie);
+    void stergeNota(const int nota,const string materie);
     void adaugaMaterie(const string& numeMaterie);
     void stergeMaterie(const string& numeMaterie);
     string getCNP() const{ return cnp; };
