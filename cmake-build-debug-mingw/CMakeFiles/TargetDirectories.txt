@@ -1,3 +1,0 @@
-C:/Facultate/CC++/ProiectC-/cmake-build-debug-mingw/CMakeFiles/ProiectC_.dir
-C:/Facultate/CC++/ProiectC-/cmake-build-debug-mingw/CMakeFiles/edit_cache.dir
-C:/Facultate/CC++/ProiectC-/cmake-build-debug-mingw/CMakeFiles/rebuild_cache.dir
