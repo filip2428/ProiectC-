@@ -192,6 +192,8 @@ void citesteTotCatalogul() {
     }
 }
 void scrieElevIndividual(const Elev& e) {
+    // Each student is stored in a separate file named after the CNP
+    fs::create_directories("elevi");
     string filename = "elevi/" + e.getCNP() + ".txt";
     ofstream out(filename);
     if (!out.is_open()) {
