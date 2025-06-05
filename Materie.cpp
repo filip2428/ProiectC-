@@ -3,6 +3,7 @@
 //
 
 #include "Materie.h"
+#include "Nota.h"
 #include <algorithm>
 
 Materie::Materie(string a) {
@@ -18,5 +19,18 @@ void Materie::delAbsenta(string data) {
         [&](const Absente& a) { return a.data == data; });
     if (it != abs.end()) {
         abs.erase(it);
+    }
+}
+
+void Materie::addNota(int valoare, const string& data) {
+    note.emplace_back(valoare, data);
+}
+
+void Materie::delNota(int valoare, const string& data) {
+    auto it = std::find_if(note.begin(), note.end(), [&](const Nota& n){
+        return n.valoare == valoare && (data.empty() || n.data == data);
+    });
+    if (it != note.end()) {
+        note.erase(it);
     }
 }

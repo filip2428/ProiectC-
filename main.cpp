@@ -25,10 +25,11 @@ int main(int argc, char* argv[]) {
         cout << "  stergeElev CNP\n";
         cout << "  adaugaMaterie CNP Materie\n";
         cout << "  stergeMaterie CNP Materie\n";
-        cout << "  adaugaNota CNP Nota Materie\n";
-        cout << "  stergeNota CNP Nota Materie\n";
+        cout << "  adaugaNota CNP Nota Materie [Data]\n";
+        cout << "  stergeNota CNP Nota Materie [Data]\n";
         cout << "  adaugaAbsenta CNP Data Materie\n";
         cout << "  motiveazaAbsenta CNP Data Materie\n";
+        cout << "  afiseazaElev CNP\n";
         cout << "  afiseazaCatalog\n";
         return 1;
     }
@@ -101,31 +102,36 @@ int main(int argc, char* argv[]) {
 
     else if (operatie == "adaugaNota") {
         if (argc < 5) {
-            cout << "Utilizare: adaugaNota CNP Nota Materie\n";
+            cout << "Utilizare: adaugaNota CNP Nota Materie [Data]\n";
             return 1;
         }
         string cnp = argv[2], val = argv[3], materie = argv[4];
+        string data = (argc >= 6) ? argv[5] : "";
         Elev* elev = cautaElev(cnp);
         if (!elev) {
             cout << "Elevul cu CNP " << cnp << " nu a fost gasit.\n";
             return 1;
         }
-        elev->adaugaNota(stoi(val), materie);
+        elev->adaugaNota(stoi(val), materie, data);
+        cout << "Adaugat nota " << val;
+        if (!data.empty()) cout << ":" << data;
+        cout << " la " << materie << " pentru " << elev->getNume() << " " << elev->getPrenume() << "\n";
         scrieElevIndividual(*elev);
     }
 
     else if (operatie == "stergeNota") {
         if (argc < 5) {
-            cout << "Utilizare: stergeNota CNP Nota Materie\n";
+            cout << "Utilizare: stergeNota CNP Nota Materie [Data]\n";
             return 1;
         }
         string cnp = argv[2], val = argv[3], materie = argv[4];
+        string data = (argc >= 6) ? argv[5] : "";
         Elev* elev = cautaElev(cnp);
         if (!elev) {
             cout << "Elevul cu CNP " << cnp << " nu a fost gasit.\n";
             return 1;
         }
-        elev->stergeNota(stoi(val), materie);
+        elev->stergeNota(stoi(val), materie, data);
         scrieElevIndividual(*elev);
     }
 
@@ -159,13 +165,45 @@ int main(int argc, char* argv[]) {
         scrieElevIndividual(*elev);
     }
 
+    else if (operatie == "afiseazaElev") {
+        if (argc < 3) {
+            cout << "Utilizare: afiseazaElev CNP\n";
+            return 1;
+        }
+        string cnp = argv[2];
+        Elev* elev = cautaElev(cnp);
+        if (!elev) {
+            cout << "Elevul cu CNP " << cnp << " nu a fost gasit.\n";
+            return 1;
+        }
+        cout << *elev << "\n";
+        for (const auto& m : elev->getMaterii()) {
+            cout << "  Materie: " << m.nume << "\n";
+            cout << "    Note: ";
+            for (const auto& n : m.note) {
+                cout << n.valoare;
+                if (!n.data.empty()) cout << ":" << n.data;
+                cout << " ";
+            }
+            cout << "\n    Absente: ";
+            for (const auto& a : m.abs)
+                cout << a.data << (a.motivat ? "*" : "") << " ";
+            cout << "\n";
+        }
+        cout << "------------------------------\n";
+    }
+
     else if (operatie == "afiseazaCatalog") {
         for (const auto& elev : catalog) {
             cout << elev << "\n";
             for (const auto& m : elev.getMaterii()) {
                 cout << "  Materie: " << m.nume << "\n";
                 cout << "    Note: ";
-                for (int n : m.note) cout << n << " ";
+                for (const auto& n : m.note) {
+                    cout << n.valoare;
+                    if (!n.data.empty()) cout << ":" << n.data;
+                    cout << " ";
+                }
                 cout << "\n    Absente: ";
                 for (const auto& a : m.abs)
                     cout << a.data << (a.motivat ? "*" : "") << " ";
