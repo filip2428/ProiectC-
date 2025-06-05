@@ -60,7 +60,7 @@ int main(int argc, char* argv[]) {
         auto it = remove_if(catalog.begin(), catalog.end(), [&](Elev& e) { return e.getCNP() == cnp; });
         if (it != catalog.end()) {
             catalog.erase(it, catalog.end());
-            remove(("elevi/" + cnp + ".txt").c_str());
+            remove(("data/elevi/" + cnp + ".txt").c_str());
         }
     }
 
