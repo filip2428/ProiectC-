@@ -3,12 +3,12 @@
 This repository contains a small C++ catalog management application. Sources
 are organised as follows:
 
-- `src/` - library source files (`.cpp` except for `main.cpp`)
+- `src/` - library source files (`.cpp` except for app1/app2)
 - `include/` - all header files
-- `main.cpp` - entry point of the application
+- `app1.cpp` / `app2.cpp` - two command line tools
 - `data/elevi/` - sample input files for students
 
-Use CMake to build the `ProiectC_` executable:
+Use CMake to build both tools:
 
 ```bash
 cmake -S . -B build

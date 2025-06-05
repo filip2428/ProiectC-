@@ -5,20 +5,28 @@
 #include <algorithm>
 #include "Elev.h"
 #include "IO.h"
+
+/// \file app2.cpp
+/// \brief Aplicatie pentru operatii de vizualizare si administrare generala.
+
 using namespace std;
 
+/// Vector global cu toti elevii din catalog
 vector<Elev> catalog;
 
+/// Gaseste un elev dupa CNP
 Elev* cautaElev(string cnp) {
     for (auto& e : catalog)
         if (e.getCNP() == cnp) return &e;
     return nullptr;
 }
 
+/// Verifica daca un sir contine doar cifre
 bool esteNumarValid(const string& str) {
     return all_of(str.begin(), str.end(), ::isdigit);
 }
 
+/// Calculeaza media unui vector generic
 template <typename T>
 double calculeazaMedie(const vector<T>& valori) {
     if (valori.empty()) return 0.0;
@@ -27,19 +35,15 @@ double calculeazaMedie(const vector<T>& valori) {
     return suma / valori.size();
 }
 
+/// Punctul de intrare al aplicatiei
 int main(int argc, char* argv[]) {
     citesteTotCatalogul();
 
     if (argc < 2) {
-        cout << "Utilizare: ./main.exe [comanda] [parametri...]\n";
+        cout << "Utilizare: ./app2 [comanda] [parametri...]\n";
         cout << "Comenzi disponibile:\n";
         cout << "  adaugaElev Nume Prenume CNP\n";
         cout << "  stergeElev CNP\n";
-        cout << "  adaugaMaterie CNP Materie\n";
-        cout << "  stergeMaterie CNP Materie\n";
-        cout << "  adaugaNota CNP Nota Materie [Data]\n";
-        cout << "  stergeNota CNP Nota Materie [Data]\n";
-        cout << "  adaugaAbsenta CNP Data Materie\n";
         cout << "  motiveazaAbsenta CNP Data Materie\n";
         cout << "  afiseazaElev CNP\n";
         cout << "  afiseazaCatalog\n";
@@ -64,30 +68,10 @@ int main(int argc, char* argv[]) {
         }
     }
 
-    else if (operatie == "adaugaMaterie" && argc >= 4) {
-        string cnp = argv[2], materie = argv[3];
-        Elev* e = cautaElev(cnp);
-        if (e) { e->adaugaMaterie(materie); scrieElevIndividual(*e); }
-    }
-
-    else if (operatie == "adaugaNota" && argc >= 5) {
-        string cnp = argv[2], val = argv[3], materie = argv[4];
-        string data = (argc >= 6 ? argv[5] : "");
-        Elev* e = cautaElev(cnp);
-        if (e) { e->adaugaNota(stoi(val), materie, data); scrieElevIndividual(*e); }
-    }
-
-    else if (operatie == "stergeNota" && argc >= 5) {
-        string cnp = argv[2], val = argv[3], materie = argv[4];
-        string data = (argc >= 6 ? argv[5] : "");
-        Elev* e = cautaElev(cnp);
-        if (e) { e->stergeNota(stoi(val), materie, data); scrieElevIndividual(*e); }
-    }
-
-    else if (operatie == "adaugaAbsenta" && argc >= 5) {
-        string cnp = argv[2], data = argv[3], materie = argv[4];
-        Elev* e = cautaElev(cnp);
-        if (e) { e->adaugaAbsenta(data, materie); scrieElevIndividual(*e); }
+    else if (operatie == "adaugaMaterie" || operatie == "stergeMaterie" ||
+             operatie == "adaugaNota" || operatie == "stergeNota" ||
+             operatie == "adaugaAbsenta") {
+        cout << "Operatie neacceptata in app2. Folositi app1." << endl;
     }
 
     else if (operatie == "motiveazaAbsenta" && argc >= 5) {

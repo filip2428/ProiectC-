@@ -1,19 +1,21 @@
-//
-// Created by András on 03/06/2025.
-//
+/// \file Materie.cpp
+/// \brief Implementarea clasei Materie.
 
 #include "Materie.h"
 #include "Nota.h"
 #include <algorithm>
 
+/// Constructor
 Materie::Materie(string a) {
     this->nume=a;
 }
 
+/// Adauga o absenta
 void Materie::addAbsenta(string data) {
     this->abs.push_back(Absente(data));
 }
 
+/// Sterge o absenta
 void Materie::delAbsenta(string data) {
     auto it = std::find_if(abs.begin(), abs.end(),
         [&](const Absente& a) { return a.data == data; });
@@ -22,10 +24,12 @@ void Materie::delAbsenta(string data) {
     }
 }
 
+/// Adauga o nota
 void Materie::addNota(int valoare, const string& data) {
     note.emplace_back(valoare, data);
 }
 
+/// Sterge o nota
 void Materie::delNota(int valoare, const string& data) {
     auto it = std::find_if(note.begin(), note.end(), [&](const Nota& n){
         return n.valoare == valoare && (data.empty() || n.data == data);
@@ -35,6 +39,7 @@ void Materie::delNota(int valoare, const string& data) {
     }
 }
 
+/// Obtine lista valorilor notelor
 vector<int> Materie::getNoteValori() const {
     vector<int> valori;
     for (const auto& n : note) {

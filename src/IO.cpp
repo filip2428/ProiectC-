@@ -1,4 +1,6 @@
 #include "IO.h"
+/// \file IO.cpp
+/// \brief Functii de citire si scriere pentru catalog.
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -10,6 +12,7 @@ using namespace std;
 
 extern vector<Elev> catalog;
 
+/// Calculeaza media valorilor dintr-un vector
 template <typename T>
 double calculeazaMedie(const vector<T>& valori) {
     if (valori.empty()) return 0.0;
@@ -21,6 +24,7 @@ double calculeazaMedie(const vector<T>& valori) {
 }
 
 //=================== CITIRE ===================
+/// Citeste elevii din fisier
 void citesteElevi(const string& numeFisier) {
     ifstream in(numeFisier);
     if (!in.is_open()) return;
@@ -31,6 +35,7 @@ void citesteElevi(const string& numeFisier) {
     in.close();
 }
 
+/// Citeste materiile din fisier
 void citesteMaterii(const string& numeFisier) {
     ifstream in(numeFisier);
     if (!in.is_open()) return;
@@ -93,6 +98,7 @@ void citesteMaterii(const string& numeFisier) {
 //=================== SCRIERE ===================
 
 
+/// Scrie materiile in fisier
 void scrieMaterii(const string& numeFisier) {
     ofstream out(numeFisier);
     for (auto& e : catalog) {
@@ -120,6 +126,7 @@ void scrieMaterii(const string& numeFisier) {
 using namespace std;
 namespace fs = std::filesystem;
 
+/// Citeste toate fisierele elevilor
 void citesteTotCatalogul() {
     catalog.clear();
 
@@ -189,6 +196,7 @@ void citesteTotCatalogul() {
 }
 
 
+/// Scrie fisierul individual al unui elev
 void scrieElevIndividual(const Elev& e) {
     string filename = "data/elevi/" + e.getCNP() + ".txt";
     ofstream out(filename);
