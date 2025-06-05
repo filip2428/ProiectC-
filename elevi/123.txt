@@ -3,6 +3,5 @@ Prenume: Ion
 CNP: 123
 
 Materie: Matematica
-Note: 
+Note: 10:2025-06-05,8:2025-06-10
 Absente: 05.06.2025*
-
