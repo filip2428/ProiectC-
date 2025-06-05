@@ -50,12 +50,21 @@ void citesteMaterii(const string& numeFisier) {
         if (pos != string::npos) {
             absenteStr = linie.substr(pos + 8);
         }
-        elev->adaugaNota(-1, materie); // for init only
+        elev->adaugaMaterie(materie, true);
         if (!noteStr.empty()) {
             istringstream noteSS(noteStr);
             string nota;
             while (getline(noteSS, nota, ',')) {
-                if (!nota.empty()) elev->adaugaNota(stoi(nota), materie);
+                if (!nota.empty()) {
+                    string valPart = nota;
+                    string dataPart;
+                    size_t col = nota.find(':');
+                    if (col != string::npos) {
+                        valPart = nota.substr(0, col);
+                        dataPart = nota.substr(col + 1);
+                    }
+                    elev->adaugaNota(stoi(valPart), materie, dataPart);
+                }
             }
         }
         if (!absenteStr.empty()) {
@@ -95,7 +104,8 @@ void scrieMaterii(const string& numeFisier) {
         for (const auto& m : e.getMaterii()) {
             out << cnp << " " << m.nume << " note:";
             for (size_t i = 0; i < m.note.size(); i++) {
-                out << m.note[i];
+                out << m.note[i].valoare;
+                if (!m.note[i].data.empty()) out << ":" << m.note[i].data;
                 if (i + 1 < m.note.size()) out << ",";
             }
             out << " absente:";
@@ -139,7 +149,7 @@ void citesteTotCatalogul() {
 
             if (linie.rfind("Materie:", 0) == 0) {
                 string materie = linie.substr(9);
-                elev.adaugaMaterie(materie);
+                elev.adaugaMaterie(materie, true);
 
                 getline(in, linie); // Note:
                 if (linie.rfind("Note:", 0) == 0) {
@@ -147,8 +157,16 @@ void citesteTotCatalogul() {
                     istringstream ss(noteStr);
                     string nota;
                     while (getline(ss, nota, ',')) {
-                        if (!nota.empty())
-                            elev.adaugaNota(stoi(nota), materie);
+                        if (!nota.empty()) {
+                            string valPart = nota;
+                            string dataPart;
+                            size_t col = nota.find(':');
+                            if (col != string::npos) {
+                                valPart = nota.substr(0, col);
+                                dataPart = nota.substr(col + 1);
+                            }
+                            elev.adaugaNota(stoi(valPart), materie, dataPart);
+                        }
                     }
                 }
 
@@ -190,7 +208,8 @@ void scrieElevIndividual(const Elev& e) {
 
         out << "Note: ";
         for (size_t i = 0; i < m.note.size(); ++i) {
-            out << m.note[i];
+            out << m.note[i].valoare;
+            if (!m.note[i].data.empty()) out << ":" << m.note[i].data;
             if (i + 1 < m.note.size()) out << ",";
         }
         out << "\n";

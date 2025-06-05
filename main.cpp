@@ -165,7 +165,11 @@ int main(int argc, char* argv[]) {
             for (const auto& m : elev.getMaterii()) {
                 cout << "  Materie: " << m.nume << "\n";
                 cout << "    Note: ";
-                for (int n : m.note) cout << n << " ";
+                for (const auto& n : m.note) {
+                    cout << n.valoare;
+                    if (!n.data.empty()) cout << ":" << n.data;
+                    cout << " ";
+                }
                 cout << "\n    Absente: ";
                 for (const auto& a : m.abs)
                     cout << a.data << (a.motivat ? "*" : "") << " ";

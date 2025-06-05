@@ -26,9 +26,9 @@ public:
     };
     void adaugaAbsenta(string,string);
     void motiveazaAbsenta(string,string);
-    void adaugaNota(const int nota,const string materie);
-    void stergeNota(const int nota,const string materie);
-    void adaugaMaterie(const string& numeMaterie);
+    void adaugaNota(int nota, const string& materie, const string& data="");
+    void stergeNota(int nota, const string& materie, const string& data="");
+    void adaugaMaterie(const string& numeMaterie, bool silent=false);
     void stergeMaterie(const string& numeMaterie);
     string getCNP() const{ return cnp; };
     const vector<Materie>& getMaterii() const {
