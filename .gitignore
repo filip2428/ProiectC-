@@ -1,0 +1,14 @@
+# Build directories
+cmake-build*
+build/
+
+# Executables
+*.exe
+
+# Generated data
+*.log
+
+# VS Code
+.vscode/
+# JetBrains IDE files
+.idea/

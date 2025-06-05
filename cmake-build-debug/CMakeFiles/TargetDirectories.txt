@@ -1,3 +1,0 @@
-C:/Users/hacfi/CLionProjects/ProiectC- Copie repo Filip/cmake-build-debug/CMakeFiles/ProiectC_.dir
-C:/Users/hacfi/CLionProjects/ProiectC- Copie repo Filip/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/hacfi/CLionProjects/ProiectC- Copie repo Filip/cmake-build-debug/CMakeFiles/rebuild_cache.dir
