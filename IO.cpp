@@ -197,7 +197,7 @@ void scrieElevIndividual(const Elev& e) {
         return;
     }
 
-    out << "Nume: " << e.getNume() << "\n";
+    out << " Nume: " << e.getNume() << "\n";
     out << "Prenume: " << e.getPrenume() << "\n";
     out << "CNP: " << e.getCNP() << "\n\n";
 

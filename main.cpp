@@ -32,6 +32,17 @@ int main(int argc, char* argv[]) {
 
     if (argc < 2) {
         cout << "Utilizare: ./main.exe [comanda] [parametri...]\n";
+        cout << "Comenzi disponibile:\n";
+        cout << "  adaugaElev Nume Prenume CNP\n";
+        cout << "  stergeElev CNP\n";
+        cout << "  adaugaMaterie CNP Materie\n";
+        cout << "  stergeMaterie CNP Materie\n";
+        cout << "  adaugaNota CNP Nota Materie [Data]\n";
+        cout << "  stergeNota CNP Nota Materie [Data]\n";
+        cout << "  adaugaAbsenta CNP Data Materie\n";
+        cout << "  motiveazaAbsenta CNP Data Materie\n";
+        cout << "  afiseazaElev CNP\n";
+        cout << "  afiseazaCatalog\n";
         return 1;
     }
 
